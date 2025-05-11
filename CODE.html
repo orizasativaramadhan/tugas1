@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kevin Sanjaya Sukamuljo Blog</title>
+<style>
+  /* Background gradient and global styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0; box-sizing: border-box;
+    background: linear-gradient(135deg, #fffae3 40%, #87ceeb 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: #f7e97e;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #202840;
+  }
+
+  main {
+    flex-grow: 1;
+    max-width: 900px;
+    margin: 1rem auto 3rem auto;
+    padding: 0 1rem;
+  }
+
+  section {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  section h2 {
+    color: #314a7e;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+  section h2::before {
+    content: attr(data-emoji);
+    margin-right: 0.7rem;
+    font-size: 1.6rem;
+  }
+
+  /* Audio styling */
+  audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5rem 0 1rem 0;
+    outline-offset: 4px;
+    border-radius: 6px;
+  }
+
+  p {
+    line-height: 1.5;
+    margin-top: 0;
+    font-size: 1rem;
+  }
+  
+  /* Tables for Career and Glossary */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px 20px;
+    text-align: left;
+  }
+  th {
+    background-color: #f7e97e;
+    color: #202840;
+    font-weight: 600;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /* Quiz Form Styling */
+  form {
+    font-size: 1rem;
+  }
+  .question-block {
+    margin-bottom: 1.3rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #ddd;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.4rem;
+    cursor: pointer;
+  }
+  input[type="radio"] {
+    margin-right: 0.7rem;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: #314a7e;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #253860;
+  }
+
+  #quiz-results {
+    margin-top: 1.5rem;
+    background: #e6f0ff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #1d3557;
+  }
+
+  /* Responsive for mobile */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    main {
+      padding: 0 1rem;
+    }
+    section {
+      padding: 1rem 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Kevin Sanjaya Sukamuljo</h1>
+</header>
+<main>
+  <section id="who-is-kevin">
+    <h2 data-emoji="👤">Who is Kevin?</h2>
+    
+    <p>Kevin Sanjaya Sukamuljo is one of Indonesia’s top men’s doubles badminton players, born in 
+Banyuwangi on August 2, 1995. He is best known as the regular partner of Marcus Fernaldi 
+Gideon in the men’s doubles category and is nicknamed "The Minions" due to their short 
+stature yet fast and dynamic playing style. Kevin joined PB Djarum in 2007 and has shown 
+outstanding talent from a young age, with a playing style characterized by speed, aggression, 
+and sharp reflexes, especially at the front of the court. Together with Marcus, Kevin has 
+achieved numerous prestigious titles, including the All England Championships in 2017 and 
+2018, and held the world No. 1 ranking for over 100 consecutive weeks. They have also won 
+dozens of titles on the BWF World Tour and Super Series. In addition to his technical skills, 
+Kevin is known for his humble and humorous personality and has a strong fan base. Off the 
+court, he is active on social media and has become a brand ambassador for several major 
+products. Kevin is an inspiration for the younger generation, admired for his hard work, 
+dedication, and love for badminton. More than just an athlete, he is a lifestyle icon and a proud 
+symbol of Indonesian sports on the global stage.</p>
+<audio controls>
+    <source src="AUDIO.mpeg" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+  </section>
+
+  <section id="who-are-the-minions">
+    <h2 data-emoji="🤝">Who are The Minions?</h2>
+    <p>"The Minions" is the nickname for the Indonesian men's doubles badminton pair Kevin Sanjaya Sukamuljo and Marcus Fernaldi Gideon. They earned this nickname because of their relatively short height compared to other international players and their fast, energetic, and entertaining style of play, similar to the lively animated characters called Minions from the popular movie franchise.</p>
+  </section>
+
+  <section id="career">
+    <h2 data-emoji="🏆">Career</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Tournament</th>
+          <th>Result</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2014</td><td>ASEAN University Games</td><td>Winner</td><td>Regional</td></tr>
+        <tr><td>2015</td><td>SEA Games</td><td>Winner</td><td>Regional</td></tr>
+        <tr><td>2016</td><td>India Open, Australian Open, China Open</td><td>Winner</td><td>BWF Superseries</td></tr>
+        <tr><td>2017</td><td>All England, India Open, Dubai Finals</td><td>Winner</td><td>BWF Superseries</td></tr>
+        <tr><td>2018</td><td>Indonesia Masters, India Open, All England</td><td>Winner</td><td>BWF World Tour (Super 500 & 750)</td></tr>
+        <tr><td>2019</td><td>Asian Championship</td><td>Winner</td><td>Continental (Asia)</td></tr>
+        <tr><td>2020</td><td>Indonesia Master</td><td>Winner</td><td>BWF World Tour (Super 500)</td></tr>
+        <tr><td>2021</td><td>Indonesia Open, Hylo Open</td><td>Winner</td><td>BWF World Tour (Super 1000)</td></tr>
+        <tr><td>2022</td><td>Denmark Open</td><td>Runner-up</td><td>BWF World Tour (Super 750)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="quizzes">
+    <h2 data-emoji="📝">Quizzes</h2>
+    <form id="quiz-form" aria-label="Kevin Sanjaya Quiz">
+      <div class="question-block">
+        <p><strong>1. Who is Kevin Sanjaya's famous men's doubles partner?</strong></p>
+        <label><input type="radio" name="q1" value="A" /> A. Hendra Setiawan</label>
+        <label><input type="radio" name="q1" value="B" /> B. Mohammad Ahsan</label>
+        <label><input type="radio" name="q1" value="C" /> C. Marcus Fernaldi Gideon</label>
+        <label><input type="radio" name="q1" value="D" /> D. Jonatan Christie</label>
+      </div>
+      <div class="question-block">
+        <p><strong>2. Why are the pair Kevin and Marcus nicknamed ‘The Minions’?</strong></p>
+        <label><input type="radio" name="q2" value="A" /> A. Because they often wear yellow clothes</label>
+        <label><input type="radio" name="q2" value="B" /> B. Because they act funny like the Minions characters</label>
+        <label><input type="radio" name="q2" value="C" /> C. Because of their relatively short height and fast playing style</label>
+        <label><input type="radio" name="q2" value="D" /> D. Because they are from the Minions club</label>
+      </div>
+      <div class="question-block">
+        <p><strong>3. When and where was Kevin Sanjaya born?</strong></p>
+        <label><input type="radio" name="q3" value="A" /> A. August 2, 1995, Surabaya</label>
+        <label><input type="radio" name="q3" value="B" /> B. August 2, 1995, Banyuwangi</label>
+        <label><input type="radio" name="q3" value="C" /> C. October 10, 1993, Jakarta</label>
+        <label><input type="radio" name="q3" value="D" /> D. May 5, 1994, Bandung</label>
+      </div>
+      <div class="question-block">
+        <p><strong>4. What achievements did Kevin and Marcus make in 2017 and 2018?</strong></p>
+        <label><input type="radio" name="q4" value="A" /> A. Olympic champion</label>
+        <label><input type="radio" name="q4" value="B" /> B. Thomas Cup champion</label>
+        <label><input type="radio" name="q4" value="C" /> C. All England Champion</label>
+        <label><input type="radio" name="q4" value="D" /> D. Sudirman Cup Champion</label>
+      </div>
+      <div class="question-block">
+        <p><strong>5. How long have the Minions been ranked number 1 in the world consecutively?</strong></p>
+        <label><input type="radio" name="q5" value="A" /> A. 50 weeks</label>
+        <label><input type="radio" name="q5" value="B" /> B. 75 weeks</label>
+        <label><input type="radio" name="q5" value="C" /> C. More than 100 weeks</label>
+        <label><input type="radio" name="q5" value="D" /> D. Less than 30 weeks</label>
+      </div>
+      <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+    <div id="quiz-results" aria-live="polite"></div>
+  </section>
+
+  <section id="glossary">
+    <h2 data-emoji="📚">Glossary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>Explanation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Kevin Sanjaya</td><td>Indonesian badminton player specializing in men's doubles.</td></tr>
+        <tr><td>The Minions</td><td>Nickname for Kevin and Marcus due to their fast and agile playing style.</td></tr>
+        <tr><td>BWF</td><td>Badminton World Federation, governing body of badminton globally.</td></tr>
+        <tr><td>All England</td><td>One of the oldest and most prestigious badminton tournaments worldwide.</td></tr>
+        <tr><td>SEA Games</td><td>Multi-sport event for Southeast Asian nations; Kevin is a gold medalist.</td></tr>
+        <tr><td>Men's Doubles</td><td>Badminton event involving two male players per team.</td></tr>
+        <tr><td>Smash</td><td>A powerful downward shot frequently used in badminton matches.</td></tr>
+        <tr><td>Net Play</td><td>Skillful play near the net area; Kevin excels here.</td></tr>
+        <tr><td>World No 1</td><td>Ranking Kevin and Marcus have held multiple times.</td></tr>
+        <tr><td>Super 500</td><td>Mid-level BWF World Tour tournaments awarding 9,200 points to winners.</td></tr>
+        <tr><td>Super 750</td><td>High-level BWF World Tour tournaments awarding 11,000 points to winners.</td></tr>
+        <tr><td>Super 1000</td><td>Top-tier BWF World Tour tournaments awarding 12,000 points to winners.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+<footer>
+  <p style="text-align: center; padding: 1rem 0; color: #314a7e;">&copy; 2023 Kevin Sanjaya Blog</p>
+</footer>
+<script>
+function checkAnswers() {
+  const correctAnswers = {
+    q1: 'C',
+    q2: 'C',
+    q3: 'B',
+    q4: 'C',
+    q5: 'C',
+  };
+
+  const form = document.getElementById('quiz-form');
+  let score = 0;
+  let unanswered = 0;
+  let detailsHtml = '';
+
+  for (const [q, correct] of Object.entries(correctAnswers)) {
+    const selectedElements = form.querySelectorAll(`[name="${q}"]`);
+    let selected = null;
+    selectedElements.forEach(el => {
+      if(el.checked) selected = el.value;
+    });
+    if (!selected) {
+      unanswered++;
+      detailsHtml += `<p><strong>${q}:</strong> Not answered.</p>`;
+    } else if (selected === correct) {
+      score++;
+      detailsHtml += `<p><strong>${q}:</strong> Correct ✔️</p>`;
+    } else {
+      detailsHtml += `<p><strong>${q}:</strong> Incorrect ✘ (Correct: ${correct})</p>`;
+    }
+  }
+
+  const resultsDiv = document.getElementById('quiz-results');
+  if (unanswered > 0) {
+    resultsDiv.innerHTML = `<p style="color: #d9534f;">Please answer all questions before submitting.</p>`;
+  } else {
+    resultsDiv.innerHTML = `<h3>Your Score: ${score} / ${Object.keys(correctAnswers).length}</h3>${detailsHtml}`;
+  }
+}
+</script>
+</body>
+</html>
